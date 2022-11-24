@@ -2,7 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = 'django-insecure-suxs$x4m#_a$xei2z38--t=5aah3g&awm#7zxx)7hf4bt^-#=&'
+SECRET_KEY = 
 
 DEBUG = True
 
@@ -11,10 +11,10 @@ ALLOWED_HOSTS = [
     'localhost'
 ]
 
-EMAIL_HOST = 'notesserver.colorado.com.br'
-EMAIL_PORT = 25
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
+EMAIL_HOST = 
+EMAIL_PORT = 
+EMAIL_USE_TLS =
+EMAIL_USE_SSL =
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 INSTALLED_APPS = [   
@@ -145,15 +145,15 @@ LOGGING = {
 }
 
 # URL do servidor padrão. Abra o CMD e digite o comando: nslookup.
-AUTH_LDAP_SERVER_URI = "ldap://COLWAD01.coloradomaq.com.br"
+AUTH_LDAP_SERVER_URI = ""
 
 # Usuário e senha do BIND. Aconselho um usuário de serviço 24h com acesso full para search.
-AUTH_LDAP_BIND_DN = "cn=Gustavo Lisi Dias,ou=TI,ou=Usuários,ou=Colorado Maquinas,dc=coloradomaq,dc=com,dc=br"
-AUTH_LDAP_BIND_PASSWORD = "CM@2019ti"
+AUTH_LDAP_BIND_DN = ""
+AUTH_LDAP_BIND_PASSWORD = ""
 
 # Métodos de pesquisa para usuários e grupos. Podem ser a mesma queryset para ambos mas aconselho criar um grupo de acesso dentro do AD para os usuário que irão acessar a plataforma.
-AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=Usuários,ou=Colorado Maquinas,dc=coloradomaq,dc=com,dc=br", ldap.SCOPE_SUBTREE, "(samaccountname=%(user)s)")
-AUTH_LDAP_GROUP_SEARCH = LDAPSearch("ou=Usuários,ou=Colorado Maquinas,dc=coloradomaq,dc=com,dc=br", ldap.SCOPE_SUBTREE, "(objectClass=groupOfNames)")
+AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=,ou=,dc=,dc=,dc=", ldap.SCOPE_SUBTREE, "(samaccountname=%(user)s)")
+AUTH_LDAP_GROUP_SEARCH = LDAPSearch("ou=,ou=,dc=,dc=,dc=", ldap.SCOPE_SUBTREE, "(objectClass=groupOfNames)")
 
 # Configuração padrão para tipos de grupo. Não alterar.
 AUTH_LDAP_GROUP_TYPE = GroupOfNamesType(name_attr="cn")
